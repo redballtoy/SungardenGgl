@@ -5,6 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface PlantDao {
@@ -17,6 +18,9 @@ interface PlantDao {
 
     @Query("SELECT * from plants where name=:plantName")
     fun getPlantByName(plantName: String): LiveData<Plant>
+
+    @Query("SELECT * from plants where growZoneNumber = :growZoneNumber ORDER BY name")
+    fun getPlantsWithGrowZoneNumber(growZoneNumber: Int): Flow<List<Plant>>
 
     //аннотация вставки не требует написания SQL запроса, он будет сгенерирован автоматически
     //если при вставке возникнут конфликты то старые данные будут заменены на новые

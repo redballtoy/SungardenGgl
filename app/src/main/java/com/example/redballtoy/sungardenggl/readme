@@ -55,6 +55,8 @@ https://www.youtube.com/watch?v=2h-vuXC0SF8&ab_channel=AndroidDevelopers
             - создание БД - расширяется класс БД Room для его дополнительной настройки
                 AppDatabase
             - создание репозитория для Plant PlantRepository.kt
+                необходимо так же добавить зависимости для hilt и Navigation
+
 
 
 

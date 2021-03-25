@@ -1,6 +1,7 @@
 package com.example.redballtoy.sungardenggl.room
 
-
+import javax.inject.Inject
+import javax.inject.Singleton
 
 
 /*
@@ -10,7 +11,14 @@ package com.example.redballtoy.sungardenggl.room
 * Служит прослойкой между Livedata и источником данных который может быть любым
 */
 
-class PlantRepository {
+@Singleton
+class PlantRepository @Inject constructor(private val plantDao: PlantDao) {
 
+    fun getPlants() = plantDao.getPlants()
+
+    fun getPlant(plantId: String) = plantDao.getPlantById(plantId)
+
+    fun getPlantWithGrowZoneNumber(growZoneNumber: Int) =
+        plantDao.getPlantsWithGrowZoneNumber(growZoneNumber)
 
 }
