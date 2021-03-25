@@ -54,6 +54,7 @@ https://www.youtube.com/watch?v=2h-vuXC0SF8&ab_channel=AndroidDevelopers
             - создание Worker - workers/SeedDatabaseWorker.kt
             - создание БД - расширяется класс БД Room для его дополнительной настройки
                 AppDatabase
+            - создание репозитория для Plant PlantRepository.kt
 
 
 
