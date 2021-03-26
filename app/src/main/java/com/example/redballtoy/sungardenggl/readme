@@ -35,7 +35,9 @@ https://www.youtube.com/watch?v=2h-vuXC0SF8&ab_channel=AndroidDevelopers
             прикреплено множество фрагментов
 
     Room /room
-        - выбор Room по причине необходимости хранения структурированных данных
+    -----------
+
+         - выбор Room по причине необходимости хранения структурированных данных
                 https://developer.android.com/training/data-storage/room
             - подключение room в gradle
             - cоздание классов представления данных @Entity
@@ -54,8 +56,29 @@ https://www.youtube.com/watch?v=2h-vuXC0SF8&ab_channel=AndroidDevelopers
             - создание Worker - workers/SeedDatabaseWorker.kt
             - создание БД - расширяется класс БД Room для его дополнительной настройки
                 AppDatabase
-            - создание репозитория для Plant PlantRepository.kt
-                необходимо так же добавить зависимости для hilt и Navigation
+            - создание репозитория для
+                Plant PlantRepository.kt
+                Garden GardenPlantingRepository
+             - необходимо так же добавить зависимости для hilt и Navigation
+
+    Constants/utilities
+        - создание констант для приложения
+            Constants.kt
+            GrowZoneUtil.kt
+
+    DI/di
+        - модули dependency injection
+            DatabaseModule.kt
+            NetworkModule.kt
+
+
+    ViewModel/viewmodel
+    --------------------
+
+        - создание вью модели для деталей растения PlantDetailViewModel.kt
+            - это вью viewmodel используемая в PlantDetailFragment
+
+        -
 
 
 
